@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <title>Assignment3</title>
+</head>
+<body>
+    <h1>String duplication</h1>
+    <div id="app">
+        Message: <input id="inputField" v-model="text" placeholder="Type a Message">
+        How many:<input id="inputField" v-model.number="howMany" placeholder="How many times to repeat?">
+        <button id="button" @click="Repeat()" class="btn btn-primary">Do it!</button>
+    </br>
+    
+
+    <span v-if="isButtonClicked">
+        <p v-if="isNumberPositive()">{{Repeat}}</p>
+        <p v-else>Must be non-negative! number: {{howMany}}</p>
+    </span>
+
+    </div>
+    <script src="javascript/index.js"></script>
+</body>
+</html>
